@@ -1,0 +1,58 @@
+<!doctype html>
+<html lang="vi">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+  <meta name="theme-color" content="#101827">
+  <meta name="apple-mobile-web-app-capable" content="yes">
+  <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+  <meta name="apple-mobile-web-app-title" content="Media Downloader">
+  <meta name="description" content="Nhận link, kiểm tra nguồn và tải tệp trực tiếp được phép trên thiết bị.">
+  <link rel="manifest" href="./manifest.webmanifest">
+  <link rel="apple-touch-icon" href="./icons/icon-192.png">
+  <link rel="icon" href="./icons/icon-192.png">
+  <link rel="stylesheet" href="./styles.css">
+  <title>Media Downloader Pro</title>
+</head>
+<body>
+  <main class="shell">
+    <header class="top">
+      <div class="brand">MDP</div>
+      <div><h1>Media Downloader Pro</h1><p>Web App · xử lý trực tiếp trên thiết bị</p></div>
+      <button id="install" class="ghost" hidden>Cài đặt</button>
+    </header>
+
+    <section class="panel">
+      <div class="eyebrow">NHẬN ĐƯỜNG DẪN</div>
+      <label for="url">Link bài đăng hoặc URL tệp</label>
+      <div class="inputrow">
+        <input id="url" type="url" placeholder="Dán link TikTok, Instagram hoặc URL tệp…" autocomplete="url" inputmode="url">
+        <button id="paste" class="secondary">Dán</button>
+      </div>
+      <button id="analyze" class="primary">Kiểm tra đường dẫn</button>
+      <div id="result" class="result neutral" aria-live="polite">
+        <strong>Chưa có đường dẫn</strong>
+        <span>Chia sẻ link từ Shortcut hoặc dán vào ô phía trên.</span>
+      </div>
+    </section>
+
+    <section class="panel" id="downloadPanel">
+      <div class="eyebrow">TẢI TỆP TRỰC TIẾP</div>
+      <p class="muted">Chỉ bật tải khi bạn có URL tệp trực tiếp và quyền tải. Link trang TikTok/Instagram không phải URL ảnh/video trực tiếp.</p>
+      <button id="download" class="secondary" disabled>Tải URL tệp trực tiếp</button>
+      <p id="downloadStatus" class="small" aria-live="polite"></p>
+    </section>
+
+    <section class="panel compact">
+      <div class="eyebrow">CÁCH DÙNG TRÊN IPHONE / IPAD</div>
+      <ol>
+        <li>Đưa trang này lên HTTPS và mở bằng Safari.</li>
+        <li>Chọn Chia sẻ → Thêm vào Màn hình chính.</li>
+        <li>Trong Shortcut, mã hóa URL đầu vào rồi mở địa chỉ PWA kèm tham số <code>?url=</code>.</li>
+      </ol>
+    </section>
+    <footer>Media Downloader Pro · Không vượt DRM, đăng nhập, paywall hoặc gỡ watermark.</footer>
+  </main>
+  <script src="./app.js"></script>
+</body>
+</html>
